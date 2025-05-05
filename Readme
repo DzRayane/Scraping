@@ -1,0 +1,88 @@
+# TP Scraping Blog du Modérateur
+ 
+**AIT TAYEB Lyes**
+ 
+Ce projet a pour objectif de scraper le site [blogdumoderateur.com](https://www.blogdumoderateur.com), extraire les articles (titre, image, auteur, date, etc.) et les stocker dans une base de données MongoDB. Une interface web avec Flask permet de consulter ces articles par sous-catégorie.
+ 
+---
+ 
+##  Fonctionnalités
+ 
+* Scraping des pages de catégorie (ex: /web/page/1, 2, etc.)
+* Extraction des données d'article :
+ 
+  * Titre
+  * Thumbnail
+  * Auteur
+  * Date de publication
+  * Sous-catégorie
+  * Résumé
+  * Images de l'article (avec descriptions)
+* Sauvegarde automatique dans MongoDB
+* Interface web avec champ de recherche par sous-catégorie
+ 
+---
+###  Installer les dépendances
+ 
+ 
+pip install flask pymongo beautifulsoup4 requests
+ 
+## 🔎 Scraping des articles
+ 
+Lancer le scraping en modifiant si besoin la catégorie dans le script :
+ 
+```python
+BASE_URL = "https://www.blogdumoderateur.com"
+CATEGORIE = "web"
+NB_PAGES = 10  # nombre de pages à parcourir
+```
+ 
+Puis exécuter le script :
+python scraping.py
+ 
+ 
+Les articles sont automatiquement insérés dans la base MongoDB.
+ 
+---
+ 
+## Interface Web (Flask)
+ 
+Lancer l'application web Flask avec :
+ 
+ 
+python app.py
+ 
+ 
+Puis aller sur [http://127.0.0.1:5000](http://127.0.0.1:5000) pour utiliser l'interface de recherche.
+ 
+Vous pouvez entrer une sous-catégorie comme :
+ 
+* Culture web
+* IA
+* Formation
+* Social
+ 
+---
+ 
+## Technologies utilisées
+ 
+* Python 3
+* Flask
+* BeautifulSoup4
+* MongoDB (pymongo)
+ 
+---
+ 
+## Fichiers importants
+ 
+* `scraper.py` : Récupère les données des articles et les stocke en base
+* `app.py` : Application Flask pour afficher les articles
+* `README.md` : Document d'explication du projet (ce fichier)
+*  `recherches.py`:il fait la meme chose que flask mais sur vs code
+ 
+---
+ 
+ 
+**DZIRI Rayane**
+ 
+---
