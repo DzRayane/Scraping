@@ -1,6 +1,6 @@
 # TP Scraping Blog du Modérateur
  
-**AIT TAYEB Lyes**
+**DZIRI Rayane**
  
 Ce projet a pour objectif de scraper le site [blogdumoderateur.com](https://www.blogdumoderateur.com), extraire les articles (titre, image, auteur, date, etc.) et les stocker dans une base de données MongoDB. Une interface web avec Flask permet de consulter ces articles par sous-catégorie.
  
